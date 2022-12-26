@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 04:44:14 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/12/26 13:41:42 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/26 17:29:17 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,6 +96,8 @@ int render_parse(t_data *d)
 				mlx_put_image_to_window(d->mlx, d->win, d->collect.img, x, y);
 			else if (d->map[i][j] == 'P')
 				render_hero(d, &x, &y);
+			else if (d->map[i][j] == 'H')
+				render_enemy(d, &x, &y);
 			x += 64;
 		}
 		y += 64;

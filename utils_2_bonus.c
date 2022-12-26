@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 13:49:07 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/12/26 16:59:16 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/26 17:33:38 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,18 @@ void	add_player_jump(t_data *d, int *x, int *y)
 	d->p.j_img[5] = mlx_xpm_file_to_image(d->mlx, HEROJUMP6, x, y);
 	d->p.j_img[6] = mlx_xpm_file_to_image(d->mlx, HEROJUMP7, x, y);
 	d->p.j_img[7] = mlx_xpm_file_to_image(d->mlx, HEROJUMP8, x, y);
+}
+
+void	add_enemy_photo(t_data *d, int *x, int *y)
+{
+	d->e.img[0] = mlx_xpm_file_to_image(d->mlx, ENEMY1, x, y);
+	d->e.img[1] = mlx_xpm_file_to_image(d->mlx, ENEMY2, x, y);
+	d->e.img[2] = mlx_xpm_file_to_image(d->mlx, ENEMY3, x, y);
+	d->e.img[3] = mlx_xpm_file_to_image(d->mlx, ENEMY4, x, y);
+	d->e.img[4] = mlx_xpm_file_to_image(d->mlx, ENEMY5, x, y);
+	d->e.img[5] = mlx_xpm_file_to_image(d->mlx, ENEMY6, x, y);
+	d->e.img[6] = mlx_xpm_file_to_image(d->mlx, ENEMY7, x, y);
+	d->e.img[7] = mlx_xpm_file_to_image(d->mlx, ENEMY8, x, y);
 }
 
 void	materials_drop_check(t_data *d, int x, int y)

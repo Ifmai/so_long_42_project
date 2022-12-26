@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 15:24:15 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/12/26 05:47:16 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/26 17:26:08 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,11 @@ void	map_materials(t_data *data)
 			if (data->map[i][j] == 'E')
 				data->count_exit += 1;
 			if (data->map[i][j] == 'P')
-			{
-				data->p.x_player = j;
-				data->p.y_player = i;
 				data->count_player += 1;
-			}
 			if (data->map[i][j] == 'C')
 				data->count_collectable += 1;
+			if (data->map[i][j] == 'H')
+				data->count_enemy += 1;
 			j++;
 		}
 		i++;

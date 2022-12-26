@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 14:01:35 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/12/26 13:39:54 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/26 17:34:28 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,11 @@ static void	map(t_data *data, char *path)
 	map_materials(data);
 	data->collect.x = malloc(sizeof(int) * data->count_collectable);
 	data->collect.y = malloc(sizeof(int) * data->count_collectable);
+	data->e.x = malloc(sizeof(int) * data->count_enemy);
+	data->e.x = malloc(sizeof(int) * data->count_enemy);
 	setting_collect_indeks(data);
+	setting_player_indeks(data);
+	setting_enemy_indeks(data);
 	materials_drop_check(data, data->p.x_player, data->p.y_player);
 	materials_count_check(data);
 }
@@ -41,8 +45,10 @@ static void	photo_in_program(t_data *data)
 	data->p.l_img = malloc(sizeof(void *) * 8);
 	data->p.r_img = malloc(sizeof(void *) * 8);
 	data->p.j_img = malloc(sizeof(void *) * 8);
+	data->e.img = malloc(sizeof(void *) * 8);
 	add_player_photo(data, &x, &y);
 	add_player_jump(data, &x, &y);
+	add_enemy_photo(data, &x, &y);
 }
 
 int	main(int ac, char **av)

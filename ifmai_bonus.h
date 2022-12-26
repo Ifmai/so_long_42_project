@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 03:57:02 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/12/26 17:08:10 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/26 17:32:29 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,7 @@ typedef struct s_data
 	int			count_collectable;
 	int			count_exit;
 	int			count_player;
+	int			count_enemy;
 	int			temp_count_coll;
 	int			temp_count_exit;
 	int			step_count;
@@ -88,6 +89,7 @@ typedef struct s_data
 
 int		check_path(char *path);
 void	clear_data(t_data *data);
+
 void	map_create(t_data *data, char *path);
 void	temp_map_create(t_data *data, char *path);
 void	map_size(t_data *data, char *path);
@@ -95,10 +97,16 @@ void	map_wall_check(t_data *data);
 void	map_materials(t_data *data);
 void	materials_count_check(t_data *data);
 void	materials_drop_check(t_data *data, int x, int y);
+
 void	setting_collect_indeks(t_data *data);
+void	setting_enemy_indeks(t_data *d);
+void	setting_player_indeks(t_data *d);
 void	error_print(char *str);
+
 void	add_player_photo(t_data *d, int *x, int *y);
 void	add_player_jump(t_data *d, int *x, int *y);
+void	add_enemy_photo(t_data *d, int *x, int *y);
+
 int		render_parse(t_data *data);
 void	key_render_parse(int keycode, t_data *d);
 int		key_hook(int keycode, t_data *data);

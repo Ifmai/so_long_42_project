@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 07:01:02 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/12/26 17:12:22 by hozdemir         ###   ########.fr       */
+/*   Updated: 2022/12/26 17:26:22 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void	clear_data(t_data *data)
 	data->temp_count_coll = 0;
 	data->temp_count_exit = 0;
 	data->step_count = 0;
+	data->count_enemy = 0;
 }
 
 int	check_path(char *path)
@@ -72,33 +73,6 @@ void	materials_count_check(t_data *data)
 	data->temp_count_exit = 0;
 }
 
-void	setting_collect_indeks(t_data *d)
-{
-	int	i;
-	int	j;
-	int	col_index;
-
-	col_index = 0;
-	i = 0;
-	while (d->map[i] != 0)
-	{
-		j = 0;
-		while (d->map[i][j] != 0 && d->map[i][j] != '\n')
-		{
-			if (d->map[i][j] == 'C')
-			{
-				d->collect.x[col_index] = j;
-				d->collect.y[col_index] = i;
-				col_index++;
-			}
-			if (d->map[i][j] != 'P' && d->map[i][j] != '0' &&
-			d->map[i][j] != '1' && d->map[i][j] != 'E' && d->map[i][j] != 'C')
-				error_print(MAPVER);
-			j++;
-		}
-		i++;
-	}
-}
 
 void	error_print(char *str)
 {
