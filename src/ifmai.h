@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 03:57:02 by hozdemir          #+#    #+#             */
-/*   Updated: 2023/01/04 03:20:24 by hozdemir         ###   ########.fr       */
+/*   Updated: 2023/01/04 18:02:28 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,15 +23,15 @@
 # define COLL "./textures/goldenapple.xpm"
 # define EXITXPM "./textures/exit.xpm"
 # define HEROXPM "./textures/hero.xpm"
-# define ZEMINXPM "./textures/zemin.xpm"
+# define ZEMINXPM "./textures/ground.xpm"
 
-# define PATHERR "ERROR MAP FİLE"
-# define WALLERR  "BRO DUVAR HATALI AÇIK VAR"
-# define PLAYERERR "BRO SADECE 1 OYUNCU OLABİLİR"
-# define EXITERR "EXIT ERRORS"
-# define COLLERR "BRO 1 TANE MEYVE YOK AMK NE YİYEK AÇMI KALAK"
-# define MAPERR "BRO MAP HATALI"
-# define MAPVER "BRO YANLIŞ HARFLER VAR MAPTE"
+# define PATHERR "ERROR MAP FİLE. x.ber"
+# define WALLERR  "ERROR. Map not surrounded by a wall."
+# define PLAYERERR "ERROR. Only one player."
+# define EXITERR "EXIT ERROR."
+# define COLLERR "ERROR. Min 1 collectable."
+# define MAPERR "ERROR. Map is wrong."
+# define MAPVER "ERROR. There are invalid letters."
 
 # define KEY 2
 # define W	13
@@ -93,5 +93,6 @@ void	setting_collect_indeks(t_data *data);
 void	error_print(char *str);
 void	map_photo_parse(t_data *data, int x, int y);
 int		key_hook(int keycode, t_data *data);
+size_t	so_strlen(char *str);
 
 #endif

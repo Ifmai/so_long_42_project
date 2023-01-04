@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 15:24:15 by hozdemir          #+#    #+#             */
-/*   Updated: 2022/12/26 17:26:08 by hozdemir         ###   ########.fr       */
+/*   Updated: 2023/01/04 17:55:05 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -96,7 +96,7 @@ void	map_size(t_data *data, char *path)
 
 	fd = open(path, O_RDONLY);
 	a = get_next_line(fd);
-	data->w_map = ft_strlen(a);
+	data->w_map = so_strlen(a);
 	free(a);
 	while (1)
 	{
@@ -104,7 +104,7 @@ void	map_size(t_data *data, char *path)
 		data->h_map += 1;
 		if (!a)
 			break ;
-		if ((int)ft_strlen(a) != data->w_map)
+		if ((int)so_strlen(a) != data->w_map)
 			error_print(MAPERR);
 		free(a);
 	}

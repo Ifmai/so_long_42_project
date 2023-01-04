@@ -6,11 +6,21 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 13:49:07 by hozdemir          #+#    #+#             */
-/*   Updated: 2023/01/04 03:20:19 by hozdemir         ###   ########.fr       */
+/*   Updated: 2023/01/04 17:53:54 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ifmai.h"
+
+size_t	so_strlen(char *str)
+{
+	size_t	i;
+
+	i = 0;
+	while(str[i] != 0 && str[i] != '\n')
+		i++;
+	return (i);
+}
 
 int	close_all(t_data *data)
 {

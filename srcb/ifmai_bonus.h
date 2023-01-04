@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 03:57:02 by hozdemir          #+#    #+#             */
-/*   Updated: 2023/01/04 15:26:08 by hozdemir         ###   ########.fr       */
+/*   Updated: 2023/01/04 18:02:07 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,15 +18,15 @@
 # include "../ft_printf/libft/libft.h"
 # include "../mlx_lib/mlx.h"
 # include "../get_next_line/get_next_line.h"
-# include "textures.h"
+# include "textures_bonus.h"
 
-# define PATHERR "ERROR MAP FİLE"
-# define WALLERR  "BRO DUVAR HATALI AÇIK VAR"
-# define PLAYERERR "BRO SADECE 1 OYUNCU OLABİLİR"
-# define EXITERR "EXIT ERRORS"
-# define COLLERR "BRO 1 TANE MEYVE YOK AMK NE YİYEK AÇMI KALAK"
-# define MAPERR "BRO MAP HATALI"
-# define MAPVER "BRO YANLIŞ HARFLER VAR MAPTE"
+# define PATHERR "ERROR MAP FİLE. x.ber"
+# define WALLERR  "ERROR. Map not surrounded by a wall."
+# define PLAYERERR "ERROR. Only one player."
+# define EXITERR "EXIT ERROR."
+# define COLLERR "ERROR. Min 1 collectable."
+# define MAPERR "ERROR. Map is wrong."
+# define MAPVER "ERROR. There are invalid letters."
 
 # define KEY 2
 # define W	13
@@ -94,6 +94,7 @@ typedef struct s_data
 	int			ry;
 }				t_data;
 
+size_t	so_strlen(char *str);
 int		check_path(char *path);
 void	clear_data(t_data *data);
 void	update_step(t_data *d);

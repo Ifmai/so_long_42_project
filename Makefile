@@ -1,6 +1,6 @@
 SRCS = ./src/so_long_main.c ./src/utils.c ./src/utils_2.c ./src/map_all_func.c ./src/key_hook.c
 SRCBS = ./srcb/main_bonus.c ./srcb/utils_bonus.c ./srcb/utils_2_bonus.c ./srcb/map_all_func_bonus.c ./srcb/key_hook_bonus.c \
-	./srcb/render_bonus.c  ./srcb/enemy_render_bonus.c 	./srcb/setting_index_all.c ./srcb/add_photo_all_bonus.c
+	./srcb/render_bonus.c  ./srcb/enemy_render_bonus.c 	./srcb/setting_index_all_bonus.c ./srcb/add_photo_all_bonus.c
 NAME = so_long
 CC = gcc
 CFLAGS = -Wall -Werror -Wextra -g

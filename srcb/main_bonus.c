@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 14:01:35 by hozdemir          #+#    #+#             */
-/*   Updated: 2023/01/04 14:27:57 by hozdemir         ###   ########.fr       */
+/*   Updated: 2023/01/04 18:04:17 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 static int	close_all(t_data *data)
 {
 	mlx_destroy_window(data->mlx, data->win);
+	system("leaks so_long");
 	exit(0);
 	return (0);
 }
@@ -102,5 +103,6 @@ int	main(int ac, char **av)
 	mlx_hook(data->win, KEY, 1L << 0, key_hook, data);
 	mlx_hook(data->win, 17, 0, close_all, data);
 	mlx_loop(data->mlx);
+	system("leaks so_long");
 	return (0);
 }

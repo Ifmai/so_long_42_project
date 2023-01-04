@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 07:01:02 by hozdemir          #+#    #+#             */
-/*   Updated: 2023/01/04 14:34:36 by hozdemir         ###   ########.fr       */
+/*   Updated: 2023/01/04 18:18:41 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,9 @@ void	update_step(t_data *d)
 	base = ft_strdup(" Step :");
 	step_count = ft_itoa(d->step_count);
 	base = ft_strjoin_get_next_line(base, step_count);
+	free(d->steps);
 	d->steps = base;
+	free(step_count);
 }
 
 void	clear_data(t_data *data)
@@ -44,7 +46,7 @@ void	clear_data(t_data *data)
 	data->step_count = 0;
 	data->count_enemy = 0;
 	data->e.check_wall = 0;
-	data->steps = " Step : 0";
+	data->steps = ft_strdup(" Step : 0");
 }
 
 int	check_path(char *path)
@@ -91,5 +93,6 @@ void	materials_count_check(t_data *data)
 void	error_print(char *str)
 {
 	ft_printf("%s", str);
+	system("leaks so_long");
 	exit(0);
 }
