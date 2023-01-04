@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 07:01:02 by hozdemir          #+#    #+#             */
-/*   Updated: 2023/01/04 18:18:41 by hozdemir         ###   ########.fr       */
+/*   Updated: 2023/01/04 18:52:16 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -93,6 +93,5 @@ void	materials_count_check(t_data *data)
 void	error_print(char *str)
 {
 	ft_printf("%s", str);
-	system("leaks so_long");
 	exit(0);
 }

@@ -1,17 +1,17 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   textures.h                                         :+:      :+:    :+:   */
+/*   textures_bonus.h                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/26 04:47:26 by hozdemir          #+#    #+#             */
-/*   Updated: 2023/01/04 02:44:02 by hozdemir         ###   ########.fr       */
+/*   Updated: 2023/01/04 19:08:41 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEXTURES_H
-# define TEXTURES_H
+#ifndef TEXTURES_BONUS_H
+# define TEXTURES_BONUS_H
 
 # define WALLXPM "./textures/textures_bonus/wall.xpm"
 # define EXITXPM "./textures/exit.xpm"

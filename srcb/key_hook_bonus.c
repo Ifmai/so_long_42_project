@@ -6,7 +6,7 @@
 /*   By: hozdemir <hozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/24 17:13:25 by hozdemir          #+#    #+#             */
-/*   Updated: 2023/01/04 18:14:44 by hozdemir         ###   ########.fr       */
+/*   Updated: 2023/01/04 18:54:36 by hozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,14 +34,12 @@ static void	key_hook3(int keycode, t_data *d)
 	if (keycode == ESC)
 	{
 		mlx_destroy_window(d->mlx, d->win);
-		system("leaks so_long");
 		exit(0);
 	}
 	if (d->count_exit == 0)
 	{
 		free(d->steps);
 		mlx_destroy_window(d->mlx, d->win);
-		system("leaks so_long");
 		exit(0);
 	}
 }
